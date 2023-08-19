@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { ContactsListStyle, DelButton, WrapperLi } from './ContactListStyled';
 
 export const ContactsList = ({ filteredContacts, onDelete }) => {
@@ -14,4 +16,9 @@ export const ContactsList = ({ filteredContacts, onDelete }) => {
       </ContactsListStyle>
     </>
   );
+};
+
+ContactsList.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+  filteredContacts: PropTypes.array.isRequired,
 };

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { InputLabelFilter } from './FilterStyled';
 
 export const Filter = ({ handleFilterChange }) => {
@@ -16,8 +18,8 @@ export const Filter = ({ handleFilterChange }) => {
             border: '2px solid #eceae254',
             transition: 'background 0.3s ease-in-out',
             background: '#f6c218',
-            webkitBoxShadow: '0 0 0 1000px #f6c218 inset',
-            webkitTextFillColor: '#08aa31c2',
+            WebkitBoxShadow: '0 0 0 1000px #f6c218 inset',
+            WebkitTextFillColor: '#08aa31c2',
           }}
           onFocus={e => {
             e.target.style.border = '2px solid #00bb31';
@@ -37,4 +39,8 @@ export const Filter = ({ handleFilterChange }) => {
       </InputLabelFilter>
     </>
   );
+};
+
+Filter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
 };

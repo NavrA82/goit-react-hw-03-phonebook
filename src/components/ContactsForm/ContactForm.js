@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { nanoid } from 'nanoid';
 
 import { Formik, Field, Form } from 'formik';
@@ -75,8 +77,7 @@ export const ContactForm = ({ addUserNameAndNumber }) => {
                 transition: 'border 0.3s ease-in-out',
                 background: '#f6c218',
                 WebkitBoxShadow: '0 0 0 1000px #f6c218 inset',
-                webkitTextFillColor: '#08aa31c2',
-                webkitTextFillBorderColor: 'red',
+                WebkitTextFillColor: '#08aa31c2',
               }}
               onFocus={e => {
                 e.target.style.border = '2px solid #00bb31';
@@ -99,6 +100,10 @@ export const ContactForm = ({ addUserNameAndNumber }) => {
       </Formik>
     </>
   );
+};
+
+ContactForm.propTypes = {
+  addUserNameAndNumber: PropTypes.func.isRequired,
 };
 
 // import * as yup from 'yup';
