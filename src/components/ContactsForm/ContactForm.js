@@ -43,16 +43,14 @@ export const ContactForm = ({ addUserNameAndNumber }) => {
                 border: '2px solid #eceae254',
                 transition: 'border 0.3s ease-in-out',
                 background: '#f6c218',
+                WebkitBoxShadow: '0 0 0 1000px #f6c218 inset',
+                WebkitTextFillColor: '#08aa31c2',
               }}
-              onMouseEnter={e => {
-                e.target.style.background = '#00bb31';
-                e.target.style.border = '2px solid #ffc218';
-                e.target.style.color = '#ffc218';
+              onFocus={e => {
+                e.target.style.border = '2px solid #00bb31';
               }}
-              onMouseLeave={e => {
-                e.target.style.background = '#f6c218';
-                e.target.style.border = '2px solid #eceae254';
-                e.target.style.color = '#08aa31c2';
+              onBlur={e => {
+                e.target.style.border = '2px solid #f6c218';
               }}
               id="name"
               type="text"
@@ -76,19 +74,15 @@ export const ContactForm = ({ addUserNameAndNumber }) => {
                 border: '2px solid #eceae254',
                 transition: 'border 0.3s ease-in-out',
                 background: '#f6c218',
-                // '::placeholder': { color: '#08775588' },
+                WebkitBoxShadow: '0 0 0 1000px #f6c218 inset',
+                webkitTextFillColor: '#08aa31c2',
+                webkitTextFillBorderColor: 'red',
               }}
-              onMouseEnter={e => {
-                e.target.style.background = '#00bb31';
-                e.target.style.border = '2px solid #ffc218';
-                e.target.style.color = '#ffc218';
-                // e.target.style.placeholder.color = '#f6c218';
+              onFocus={e => {
+                e.target.style.border = '2px solid #00bb31';
               }}
-              onMouseLeave={e => {
-                e.target.style.background = '#f6c218';
-                e.target.style.border = '2px solid #eceae254';
-                e.target.style.color = '#08aa31c2';
-                // e.target.style.placeholder.color = '#08775588';
+              onBlur={e => {
+                e.target.style.border = '2px solid #f6c218';
               }}
               id="number"
               type="tel"
